@@ -8,8 +8,8 @@ namespace TaskSchedulingProblem
 {
     class Machine
     {
-        public int id { get; set; }
-        public List<Job> jobs { get; set; }
+        public int Id { get; set; }
+        public List<Job> Jobs { get; set; }
         public int IdleTime { get; set; }
 
     }
