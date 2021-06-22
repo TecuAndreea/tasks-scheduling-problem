@@ -18,7 +18,7 @@ namespace TaskSchedulingProblem
         public void ShiftUp(ref Bat bat, int column)
         {
             var value = bat.Machines[0].Jobs[column];
-            for (int index1 = 0; index1 < MachineNumber-1; ++index1)
+            for (int index1 = 0; index1 < MachineNumber - 1; ++index1)
             {
                 for (int index2 = 0; index2 < JobNumber; ++index2)
                 {
@@ -31,17 +31,18 @@ namespace TaskSchedulingProblem
             }
             for (int index2 = 0; index2 < JobNumber; ++index2)
             {
-                if (bat.Machines[MachineNumber-1].Jobs[index2] == value)
+                if (bat.Machines[MachineNumber - 1].Jobs[index2] == value)
                 {
                     bat.Machines[MachineNumber - 1].Jobs[index2] = bat.Machines[MachineNumber - 1].Jobs[column];
                 }
             }
             bat.Machines[MachineNumber - 1].Jobs[column] = value;
         }
-        public void ShiftDown(ref Bat bat,int column)
+
+        public void ShiftDown(ref Bat bat, int column)
         {
-            var value = bat.Machines[MachineNumber-1].Jobs[column];
-            for (int index1 = 1; index1 < MachineNumber ; ++index1)
+            var value = bat.Machines[MachineNumber - 1].Jobs[column];
+            for (int index1 = 1; index1 < MachineNumber; ++index1)
             {
                 for (int index2 = 0; index2 < JobNumber; ++index2)
                 {
@@ -60,6 +61,88 @@ namespace TaskSchedulingProblem
                 }
             }
             bat.Machines[0].Jobs[column] = value;
+        }
+
+        public int ColReuse(Bat bat, Bat bestBat)
+        {
+            int maxColReuseBat = 0;
+            int maxColReuseBestBat = 0;
+
+            for (int column = 0; column < JobNumber; ++column)
+            {
+                int[] markBat = new int[JobNumber];
+                Array.Clear(markBat, 0, JobNumber);
+
+                int[] markBestBat = new int[JobNumber];
+                Array.Clear(markBestBat, 0, JobNumber);
+
+                for (int row = 0; row < MachineNumber; ++row)
+                {
+                    ++markBat[bat.Machines[row].Jobs[column].Number - 1];
+                    ++markBestBat[bestBat.Machines[row].Jobs[column].Number - 1];
+
+                    if (markBat[bat.Machines[row].Jobs[column].Number - 1] > maxColReuseBat)
+                    {
+                        maxColReuseBat = markBat[bat.Machines[row].Jobs[column].Number - 1];
+                    }
+
+                    if (markBestBat[bat.Machines[row].Jobs[column].Number - 1] > maxColReuseBestBat)
+                    {
+                        maxColReuseBestBat = markBestBat[bestBat.Machines[row].Jobs[column].Number - 1];
+                    }
+                }
+            }
+
+            return Math.Abs(maxColReuseBat - maxColReuseBestBat);
+        }
+
+        public void InactionDel(ref Bat bat)
+        {
+            int maxIdleTime = 0;
+            int row = 0;
+
+            foreach (var machine in bat.Machines)
+            {
+                if (machine.IdleTime > maxIdleTime)
+                {
+                    maxIdleTime = machine.IdleTime;
+                    row = machine.Id - 1;
+                }
+            }
+
+            var value = bat.Machines[row].Jobs[JobNumber - 1];
+            for (int column = 1; column < JobNumber; ++column)
+            {
+                bat.Machines[row].Jobs[column] = bat.Machines[row].Jobs[--column];
+            }
+            bat.Machines[row].Jobs[0] = value;
+        }
+
+        public void SmallWalk(ref Bat bat)
+        {
+            var random = new Random();
+
+            int row1 = random.Next(0, MachineNumber);
+            int column1 = random.Next(0, JobNumber);
+
+            int row2 = random.Next(0, MachineNumber);
+            int column2 = random.Next(0, JobNumber);
+
+            var value = bat.Machines[row1].Jobs[column1];
+            for (int column = 0; column < JobNumber; ++column)
+            {
+                if(bat.Machines[row1].Jobs[column].Number == bat.Machines[row2].Jobs[column2].Number)
+                {
+                    bat.Machines[row1].Jobs[column] = bat.Machines[row1].Jobs[column1];
+                    bat.Machines[row1].Jobs[column1] = bat.Machines[row2].Jobs[column2];
+                }
+
+                if(bat.Machines[row2].Jobs[column].Number == bat.Machines[row1].Jobs[column1].Number)
+                {
+                    bat.Machines[row2].Jobs[column] = bat.Machines[row2].Jobs[column2];
+                    bat.Machines[row2].Jobs[column2] = value;
+                }
+            }            
         }
     }
 }

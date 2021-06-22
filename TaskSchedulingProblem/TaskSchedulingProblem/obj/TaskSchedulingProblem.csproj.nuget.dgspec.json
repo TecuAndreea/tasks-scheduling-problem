@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {}
+    "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {
+    "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
+        "projectUniqueName": "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
         "projectName": "TaskSchedulingProblem",
-        "projectPath": "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
-        "packagesPath": "C:\\Users\\emasu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\obj\\",
+        "projectPath": "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
+        "packagesPath": "C:\\Users\\tecu_\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\emasu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tecu_\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
