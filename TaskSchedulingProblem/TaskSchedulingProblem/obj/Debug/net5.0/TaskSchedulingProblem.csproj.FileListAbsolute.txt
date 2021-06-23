@@ -14,3 +14,19 @@ C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSc
 C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\ref\TaskSchedulingProblem.dll
 C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.pdb
 C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.genruntimeconfig.cache
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.exe
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.deps.json
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.runtimeconfig.json
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.runtimeconfig.dev.json
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.dll
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\ref\TaskSchedulingProblem.dll
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.pdb
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.csprojAssemblyReference.cache
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.GeneratedMSBuildEditorConfig.editorconfig
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.AssemblyInfoInputs.cache
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.AssemblyInfo.cs
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.csproj.CoreCompileInputs.cache
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.dll
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\ref\TaskSchedulingProblem.dll
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.pdb
+D:\Facultate\Cloud Native Applications-an2,sem2\Tema3-Echipa\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.genruntimeconfig.cache

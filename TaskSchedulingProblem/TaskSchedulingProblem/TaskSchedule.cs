@@ -136,18 +136,63 @@ namespace TaskSchedulingProblem
             var value = bat.Machines[row1].Jobs[column1];
             for (int column = 0; column < JobNumber; ++column)
             {
-                if(bat.Machines[row1].Jobs[column].Number == bat.Machines[row2].Jobs[column2].Number)
+                if (bat.Machines[row1].Jobs[column].Number == bat.Machines[row2].Jobs[column2].Number)
                 {
                     bat.Machines[row1].Jobs[column] = bat.Machines[row1].Jobs[column1];
                     bat.Machines[row1].Jobs[column1] = bat.Machines[row2].Jobs[column2];
                 }
 
-                if(bat.Machines[row2].Jobs[column].Number == bat.Machines[row1].Jobs[column1].Number)
+                if (bat.Machines[row2].Jobs[column].Number == bat.Machines[row1].Jobs[column1].Number)
                 {
                     bat.Machines[row2].Jobs[column] = bat.Machines[row2].Jobs[column2];
                     bat.Machines[row2].Jobs[column2] = value;
                 }
-            }            
+            }
+        }
+
+        public void Fold(Bat bat)
+        {
+            var rand = new Random();
+            int row = rand.Next(0, MachineNumber);
+            bat.Machines[row].Jobs.Reverse();
+        }
+
+        public void FullReverse(Bat bat)
+        {
+            foreach (var machine in bat.Machines)
+            {
+                machine.Jobs.Reverse();
+            }
+        }
+
+        public List<int> SelectFewRows()
+        {
+            var rand = new Random();
+            int nrRows = rand.Next(0, MachineNumber);
+            List<int> rows = new();
+            int index = 0;
+            while (index < nrRows)
+            {
+                int row = rand.Next(0, MachineNumber);
+                if (!rows.Contains(row))
+                {
+                    rows.Add(row);
+                    ++index;
+                }
+            }
+            return rows;
+        }
+
+        public void Join(Bat bat)
+        {
+            List<int> rows = SelectFewRows();
+            var rand = new Random();
+            int nrBat = rand.Next(0, Bats.Count);
+            Bat selectedBat = Bats[nrBat];
+            for(int row=0; row<rows.Count; ++row)
+            {
+                bat.Machines[rows[row]].Jobs = selectedBat.Machines[rows[row]].Jobs;
+            }
         }
     }
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {}
+    "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {
+    "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
+        "projectUniqueName": "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
         "projectName": "TaskSchedulingProblem",
-        "projectPath": "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
-        "packagesPath": "C:\\Users\\tecu_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tecu_\\Desktop\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\obj\\",
+        "projectPath": "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
+        "packagesPath": "C:\\Users\\Viorel\\.nuget\\packages\\",
+        "outputPath": "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tecu_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Viorel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
