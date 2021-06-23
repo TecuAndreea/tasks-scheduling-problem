@@ -23,32 +23,50 @@ namespace TaskSchedulingProblem
             return false;
         }
 
-        static public Tuple<int, int, int> Read()
+        static public Tuple<int, int, int, int> Read()
         {
             int numberOfMachines = 0;
             int numberOfJobs = 0;
             int numberOfBats = 0;
-            while (!numberOfMachines.Equals(numberOfJobs))
+            int maxGeneration = 0;
+            while (numberOfMachines == 0)
             {
-                Console.WriteLine("The number of machines must be equal to the number of jobs.");
+                Console.WriteLine("Introduce number of machines and jobs:");
+
                 bool a = Int32.TryParse(Console.ReadLine(), out numberOfMachines);
-                bool b = Int32.TryParse(Console.ReadLine(), out numberOfJobs);
-                //validation (it should be a number)
                 while (!a)
                 {
+                    Console.WriteLine("Introduce only numbers");
                     a = Int32.TryParse(Console.ReadLine(), out numberOfMachines);
                 }
-                while (!b)
+            }
+            numberOfJobs = numberOfMachines;
+
+            while (numberOfBats == 0)
+            {
+                Console.WriteLine("Introduce number of bats:");
+
+                bool a = Int32.TryParse(Console.ReadLine(), out numberOfBats);
+                while (!a)
                 {
-                    b = Int32.TryParse(Console.ReadLine(), out numberOfJobs);
+                    Console.WriteLine("Introduce only numbers");
+                    a = Int32.TryParse(Console.ReadLine(), out numberOfBats);
                 }
             }
-            bool c = Int32.TryParse(Console.ReadLine(), out numberOfBats);
-            while (!c)
+
+            while (maxGeneration == 0)
             {
-                c = Int32.TryParse(Console.ReadLine(), out numberOfBats);
+                Console.WriteLine("Introduce number of maxGeneration:");
+
+                bool a = Int32.TryParse(Console.ReadLine(), out maxGeneration);
+                while (!a)
+                {
+                    Console.WriteLine("Introduce only numbers");
+                    a = Int32.TryParse(Console.ReadLine(), out maxGeneration);
+                }
             }
-            return new Tuple<int, int, int>(numberOfMachines, numberOfJobs, numberOfBats);
+
+            return new Tuple<int, int, int, int>(numberOfMachines, numberOfJobs, numberOfBats, maxGeneration);
         }
 
         static public List<Bat> InitializeBatPopulation(int numberOfMachines, int numberOfJobs, int numberOfBats)
@@ -60,6 +78,19 @@ namespace TaskSchedulingProblem
             foreach (Bat bat in bats)
             {
                 PrintResult(bat);
+            }
+
+            var rand = new Random();
+
+            foreach(Bat bat in bats)
+            {
+                foreach(var machine in bat.Machines)
+                {
+                    foreach(var job in machine.Jobs)
+                    {
+                        job.TimeSpan = rand.Next(1, 31);
+                    }
+                }
             }
 
             return bats;
@@ -112,13 +143,12 @@ namespace TaskSchedulingProblem
                     }
                 }
 
-                if(!exists)
+                if (!exists)
                 {
                     batMachines.Add(posibleBat);
                 }
             }
 
-            Console.WriteLine("Here");
             return batMachines;
         }
 

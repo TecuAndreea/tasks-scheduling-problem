@@ -15,9 +15,16 @@ namespace TaskSchedulingProblem
 
         public int JobNumber { get; set; }
 
+        public int BatNumber { get; set; }
+
         public TaskSchedule()
         {
-            Bats = Helper.InitializeBatPopulation(3, 3, 4);
+            Tuple<int, int, int, int> values = Helper.Read();
+            MachineNumber = values.Item1;
+            JobNumber = values.Item2;
+            BatNumber = values.Item3;
+            MaxGeneration = values.Item4;
+            Bats = Helper.InitializeBatPopulation(MachineNumber, JobNumber, BatNumber);
         }
 
         public void ShiftUp(ref Bat bat, int column)
@@ -150,14 +157,14 @@ namespace TaskSchedulingProblem
             }
         }
 
-        public void Fold(Bat bat)
+        public void Fold(ref Bat bat)
         {
             var rand = new Random();
             int row = rand.Next(0, MachineNumber);
             bat.Machines[row].Jobs.Reverse();
         }
 
-        public void FullReverse(Bat bat)
+        public void FullReverse(ref Bat bat)
         {
             foreach (var machine in bat.Machines)
             {
@@ -183,16 +190,128 @@ namespace TaskSchedulingProblem
             return rows;
         }
 
-        public void Join(Bat bat)
+        public void Join(ref Bat bat)
         {
             List<int> rows = SelectFewRows();
             var rand = new Random();
             int nrBat = rand.Next(0, Bats.Count);
             Bat selectedBat = Bats[nrBat];
-            for(int row=0; row<rows.Count; ++row)
+
+            for (int row = 0; row < rows.Count; ++row)
             {
                 bat.Machines[rows[row]].Jobs = selectedBat.Machines[rows[row]].Jobs;
             }
+        }
+
+        public float ObjectiveFunction(Bat bat)
+        {
+            float sum = 0;
+            foreach (var machine in bat.Machines)
+            {
+                foreach (var job in machine.Jobs)
+                {
+                    sum += job.TimeSpan;
+                }
+            }
+
+            return sum;
+        }
+
+        public Bat InitialBestBat()
+        {
+            float min = ObjectiveFunction(Bats[0]);
+            Bat bestBat = new();
+
+            foreach (Bat bat in Bats)
+            {
+                float fitness = ObjectiveFunction(bat);
+                if (fitness < min)
+                {
+                    min = fitness;
+                    bestBat = bat;
+                }
+            }
+
+            return bestBat;
+        }
+
+        public void ChooseMoveFunction(ref Bat bat)
+        {
+            var rand = new Random();
+            int option = rand.Next(0, 5);
+            switch (option)
+            {
+                case 0:
+                    {
+                        Fold(ref bat);
+                        break;
+                    }
+                case 1:
+                    {
+                        FullReverse(ref bat);
+                        break;
+                    }
+                case 2:
+                    {
+                        Join(ref bat);
+                        break;
+                    }
+                case 3:
+                    {
+                        ShiftDown(ref bat, rand.Next(0, JobNumber));
+                        break;
+                    }
+                case 4:
+                    {
+                        ShiftUp(ref bat, rand.Next(0, JobNumber));
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+
+            }
+        }
+
+        public Bat BatAlgorithm()
+        {
+            float loudness = 0.95f;
+            float pulseRate = 1f;
+            var rand = new Random();
+            Bat bestBat = InitialBestBat();
+
+            Bats = Helper.InitializeBatPopulation(MachineNumber, JobNumber, BatNumber);
+            for (int index1 = 1; index1 < MaxGeneration; ++index1)
+            {
+                for (int index2 = 0; index2 < BatNumber; ++index2)
+                {
+                    Bat tempBat = Bats[index2];
+                    Bats[index2].Frequency = rand.Next(1, 100);
+                    Bats[index2].Velocity += ColReuse(Bats[index2], bestBat) * Bats[index2].Frequency;
+                    ChooseMoveFunction(ref tempBat);
+
+                    float randomPulseRate = rand.Next(0, 1);
+                    if (randomPulseRate > 1 - pulseRate)
+                    {
+                        SmallWalk(ref tempBat);
+                        InactionDel(ref tempBat);
+                    }
+
+                    float randomLoudness = rand.Next(0, 1);
+                    if (randomLoudness < loudness)
+                    {
+                        Bats[index2] = tempBat;
+                    }
+
+                    if (ObjectiveFunction(Bats[index2]) < ObjectiveFunction(bestBat))
+                    {
+                        bestBat = Bats[index2];
+                    }
+                }
+                pulseRate = 1 - (1 / (MaxGeneration + 1 - index1));
+            }
+            return bestBat;
         }
     }
 }
