@@ -6,7 +6,8 @@ namespace TaskSchedulingProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            TaskSchedule taskSchedule = new();
+
         }
     }
 }

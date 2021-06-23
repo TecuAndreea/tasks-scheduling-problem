@@ -11,7 +11,7 @@ namespace TaskSchedulingProblem
         public int Number { get; set; }
         public int TimeSpan { get; set; }
         public int StartTime { get; set; }
-        public bool Assigned { get; set; }
+        public bool Assigned { get; set; } = default;
 
     }
 }

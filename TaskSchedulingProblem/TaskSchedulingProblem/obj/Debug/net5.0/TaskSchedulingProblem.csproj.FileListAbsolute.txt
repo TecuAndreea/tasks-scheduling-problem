@@ -1,0 +1,16 @@
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.exe
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.deps.json
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.runtimeconfig.json
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.runtimeconfig.dev.json
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.dll
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\ref\TaskSchedulingProblem.dll
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\bin\Debug\net5.0\TaskSchedulingProblem.pdb
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.csprojAssemblyReference.cache
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.AssemblyInfoInputs.cache
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.AssemblyInfo.cs
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.csproj.CoreCompileInputs.cache
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.dll
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\ref\TaskSchedulingProblem.dll
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.pdb
+C:\Users\tecu_\Desktop\ACC\tasks-scheduling-problem\TaskSchedulingProblem\TaskSchedulingProblem\obj\Debug\net5.0\TaskSchedulingProblem.genruntimeconfig.cache

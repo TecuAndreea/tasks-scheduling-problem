@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TaskSchedulingProblem
 {
-    class TaskScedule
+    class TaskSchedule
     {
         public List<Bat> Bats { get; set; }
         public int MaxGeneration { get; set; }
@@ -14,6 +14,11 @@ namespace TaskSchedulingProblem
         public int MachineNumber { get; set; }
 
         public int JobNumber { get; set; }
+
+        public TaskSchedule()
+        {
+            Bats = Helper.InitializeBatPopulation(3, 3, 4);
+        }
 
         public void ShiftUp(ref Bat bat, int column)
         {

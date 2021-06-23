@@ -8,7 +8,7 @@ namespace TaskSchedulingProblem
 {
     class Bat
     {
-        public List<Machine> Machines { get; set; }
+        public List<Machine> Machines { get; set; } = new();
         public float Frequency { get; set; }
         public float Velocity { get; set; }
 
