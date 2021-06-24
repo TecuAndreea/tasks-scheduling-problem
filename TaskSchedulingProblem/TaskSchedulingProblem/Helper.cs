@@ -75,24 +75,47 @@ namespace TaskSchedulingProblem
 
             List<Bat> bats = BatMachines(list, numberOfMachines).OrderBy(x => Guid.NewGuid()).Take(numberOfBats).ToList();
 
-            foreach (Bat bat in bats)
+            Console.WriteLine();
+            for (int bat = 0; bat < numberOfBats; bat++)
             {
-                PrintResult(bat);
+                Console.WriteLine("Bat " + (bat + 1));
+                PrintResult(bats[bat]);
             }
 
             var rand = new Random();
 
-            foreach(Bat bat in bats)
+            foreach (Bat bat in bats)
             {
-                foreach(var machine in bat.Machines)
+                foreach (var machine in bat.Machines)
                 {
-                    foreach(var job in machine.Jobs)
+                    foreach (var job in machine.Jobs)
                     {
                         job.TimeSpan = rand.Next(1, 31);
                     }
                 }
             }
+            foreach (Bat bat in bats)
+            {
+                for (int machine = 0; machine < numberOfMachines; ++machine)
+                {
+                    for (int job = 0; job < numberOfJobs; ++job)
+                    {
+                        List<int> possibleSolution = new();
+                        possibleSolution.Add(bat.Machines[machine].IdleTime);
+                        for (int k = 0; k < numberOfMachines; ++k)
+                        {
+                            if (k != machine && bat.Machines[k].Jobs[job].Assigned == true)
+                            {
+                                possibleSolution.Add(bat.Machines[k].Jobs[job].StartTime + bat.Machines[k].Jobs[job].TimeSpan);
 
+                            }
+                        }
+                        bat.Machines[machine].Jobs[job].StartTime = possibleSolution.Max();
+                        bat.Machines[machine].Jobs[job].Assigned = true;
+                        bat.Machines[machine].IdleTime = bat.Machines[machine].Jobs[job].StartTime + bat.Machines[machine].Jobs[job].TimeSpan;
+                    }
+                }
+            }
             return bats;
         }
 
@@ -196,10 +219,11 @@ namespace TaskSchedulingProblem
             return list;
         }
 
-        static void PrintResult(Bat bat)
+        static public void PrintResult(Bat bat)
         {
             for (int row = 0; row < bat.Machines.Count; ++row)
             {
+                Console.Write("Machine " + bat.Machines[row].Id + " : ");
                 for (int column = 0; column < bat.Machines[row].Jobs.Count; ++column)
                 {
                     Console.Write(bat.Machines[row].Jobs[column].Number + " ");

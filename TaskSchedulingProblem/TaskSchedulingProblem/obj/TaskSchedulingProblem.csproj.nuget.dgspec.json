@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {}
+    "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {}
   },
   "projects": {
-    "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {
+    "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
+        "projectUniqueName": "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
         "projectName": "TaskSchedulingProblem",
-        "projectPath": "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
-        "packagesPath": "C:\\Users\\Viorel\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\Cloud Native Applications-an2,sem2\\Tema3-Echipa\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\obj\\",
+        "projectPath": "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\TaskSchedulingProblem.csproj",
+        "packagesPath": "C:\\Users\\emasu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\emasu\\Desktop\\Facultate-Anul 2_Sem II\\ACC\\tasks-scheduling-problem\\TaskSchedulingProblem\\TaskSchedulingProblem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Viorel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\emasu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
